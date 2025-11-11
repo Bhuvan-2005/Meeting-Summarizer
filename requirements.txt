@@ -1,0 +1,31 @@
+# Core ML/AI libraries
+torch==2.1.0
+torchvision==0.16.0
+torchaudio==2.1.0
+transformers==4.35.0
+tokenizers==0.15.0
+
+# Audio processing
+openai-whisper
+librosa==0.10.1
+soundfile==0.12.1
+scipy==1.11.4
+pydub
+
+# Data and NLP
+datasets
+nltk
+rouge-score
+
+# Utilities
+accelerate
+numpy
+pandas
+matplotlib
+seaborn
+
+# Jupyter interface
+ipywidgets
+
+# Optional: for CUDA support (adjust index-url as needed)
+# --index-url https://download.pytorch.org/whl/cu118
