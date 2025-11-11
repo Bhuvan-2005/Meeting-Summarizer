@@ -12,34 +12,79 @@ AI meeting summarization notebook: transcribes audio via Whisper, cleans text, s
 - **Interactive Interface**: Jupyter-based file upload and processing interface
 - **GPU Acceleration**: Optimized for CUDA-enabled GPUs
 
+## How It Works
+
+This project is implemented as a comprehensive Jupyter notebook (`meetingsummarizer.ipynb`) that follows a structured pipeline for meeting summarization:
+
+1. **Environment Setup**: Automatically installs and configures all required dependencies, resolving compatibility issues for GPU acceleration and CUDA libraries.
+
+2. **Model Initialization**: Loads OpenAI Whisper for speech recognition and BART/T5 models for text summarization, with automatic device detection (CPU/GPU).
+
+3. **Audio Processing**: Handles various audio formats, performs feature extraction, and chunks long recordings for efficient processing.
+
+4. **Speech-to-Text Conversion**: Transcribes audio files into text using Whisper, supporting multiple languages and automatic language detection.
+
+5. **Text Preprocessing**: Cleans raw transcripts by removing filler words, timestamps, and normalizing text for better summarization quality.
+
+6. **Summarization**: Generates concise summaries using transformer models, with configurable length and quality parameters.
+
+7. **Evaluation and Testing**: Includes built-in testing with sample data and ROUGE metrics for quality assessment.
+
+8. **Interactive Interface**: Provides a user-friendly file upload interface for processing audio files directly within the notebook.
+
+The notebook is designed to run end-to-end, from audio input to final summary output, with comprehensive error handling and progress reporting.
+
 ## Installation
 
-1. Clone this repository:
-```bash
-git clone https://github.com/Bhuvan-2005/meeting-summarizer.git
-cd meeting-summarizer
-```
+This notebook is specifically designed to run on the Kaggle platform due to its optimized environment for machine learning workloads:
 
-2. Install dependencies:
-```bash
-pip install -r requirements.txt
-```
+1. **Create a Kaggle Account**: Sign up at https://www.kaggle.com if you don't have an account.
 
-3. Open the Jupyter notebook:
-```bash
-jupyter notebook meetingsummarizer.ipynb
-```
+2. **Create a New Notebook**:
+   - Go to https://www.kaggle.com/code
+   - Click "New Notebook"
+   - Select "Python" as the environment
 
-## Requirements
+3. **Upload the Notebook**:
+   - Download `meetingsummarizer.ipynb` from this repository
+   - In Kaggle, click "File" > "Upload Notebook" or paste the code directly
 
+4. **Enable GPU Acceleration**:
+   - In the notebook settings (right panel), enable "GPU" accelerator
+   - Select "T4 x2" or "P100" GPU option (see Platform Requirements below)
+
+5. **Internet Access**:
+   - Ensure internet is enabled in notebook settings for downloading models and datasets
+
+The notebook includes automated dependency installation and environment setup, so no manual pip installs are required.
+
+## Platform Requirements
+
+This system is optimized for and tested exclusively on the Kaggle platform, which provides the necessary computational resources and pre-configured environment for machine learning workloads.
+
+### Required Environment:
+- **Platform**: Kaggle Notebooks (https://www.kaggle.com)
+- **GPU Accelerator**: 
+  - T4 x2 (recommended - tested and verified to work without issues)
+  - P100 (alternative option with sufficient VRAM)
+- **Internet Access**: Enabled for model/dataset downloads
+- **Session Time**: Adequate time allocation (recommended: 9+ hours for full processing)
+
+### Technical Requirements:
 - Python 3.8+
-- PyTorch 2.1.0+ (with CUDA support for GPU acceleration)
+- PyTorch 2.1.0+ with CUDA 11.8 support
 - Transformers 4.35.0+
-- OpenAI Whisper
-- Librosa, SoundFile, SciPy
-- NLTK, Datasets, ROUGE-Score
-- Jupyter Notebook
-- ipywidgets
+- OpenAI Whisper (base model or larger)
+- Audio processing libraries (Librosa, SoundFile, SciPy)
+- NLP libraries (NLTK, ROUGE-Score)
+- Jupyter Notebook with ipywidgets support
+
+### Hardware Specifications:
+- **GPU Memory**: Minimum 16GB VRAM (T4 x2 provides ~32GB effective)
+- **RAM**: 16GB+ system RAM
+- **Storage**: Sufficient for model downloads (~5-10GB)
+
+**Note**: The system may not function properly on local machines or other cloud platforms due to dependency conflicts and CUDA version incompatibilities. Kaggle's managed environment ensures consistent performance and compatibility.
 
 ## Usage
 
