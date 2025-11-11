@@ -68,7 +68,7 @@ This system is optimized for and tested exclusively on the Kaggle platform, whic
   - T4 x2 (recommended - tested and verified to work without issues)
   - P100 (alternative option with sufficient VRAM)
 - **Internet Access**: Enabled for model/dataset downloads
-- **Session Time**: Adequate time allocation (recommended: 9+ hours for full processing)
+- **Session Time**: Approximately 15-20 minutes for full processing (including model loading and inference)
 
 ### Technical Requirements:
 - Python 3.8+
