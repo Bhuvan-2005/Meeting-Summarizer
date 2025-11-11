@@ -14,7 +14,7 @@ This project provides an AI-powered meeting summarization system using machine l
 
 For questions, issues, or contributions, please contact:
 - **Phone**: +91 9491149955
-- **Email**: (add your email here if available)
+- **Email**: gbindra21@gmail.com
 
 ## Responsible Use
 

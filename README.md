@@ -16,7 +16,7 @@ AI meeting summarization notebook: transcribes audio via Whisper, cleans text, s
 
 1. Clone this repository:
 ```bash
-git clone https://github.com/yourusername/meeting-summarizer.git
+git clone https://github.com/Bhuvan-2005/meeting-summarizer.git
 cd meeting-summarizer
 ```
 
@@ -76,7 +76,7 @@ See [DISCLAIMER.md](DISCLAIMER.md) for important usage notices and limitations.
 
 For questions or contributions:
 - **Phone**: +91 9491149955
-- **GitHub**: [Your GitHub Profile](https://github.com/yourusername)
+- **Email**: gbindra21@gmail.com
 
 ## Contributing
 
